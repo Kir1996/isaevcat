@@ -2,7 +2,7 @@ import React from "react";
 import './App.css'
 import Main from "./Component/Main";
 import LikeCats from "./Component/LikeCats";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 
 
 
@@ -10,12 +10,12 @@ function App() {
 
   return (
     <div className="App">
-       <Router>
+       <BrowserRouter basename="/isaevcat">
        <Routes>
         <Route path="/" exact element={<Main/>}/>
         <Route path="/like" element={<LikeCats/>}/>
         </Routes>
-    </Router>
+        </BrowserRouter>
     </div>
   );
 }

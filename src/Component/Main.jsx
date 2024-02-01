@@ -18,7 +18,7 @@ function Main({ addToLikedCats}) {
     axios
       .get(`https://api.thecatapi.com/v1/images/search?size=med&mime_types=jpg&format=json&has_breeds=true&order=RANDOM&page=${carrentPage}&limit=15&api_key=live_BbyO57b6tfewekN9cRGXTotmA9Kf5TNyeIqJkxaH2WJcfBK7bm3ZLtG3teAxflsm`)
       .then((response) => {
-        setData([...data, ...response.data]);
+        setData(prevData =>[...prevData, ...response.data]);
         setCarrentPage(prevState=>prevState+1)
     })
     .finally(()=>setFething(false))
@@ -27,7 +27,7 @@ function Main({ addToLikedCats}) {
         
     });
 }
-  }, [fething]);
+  }, [fething, carrentPage]);
 
 
   useEffect(()=>{
