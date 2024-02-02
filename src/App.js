@@ -2,7 +2,7 @@ import React from "react";
 import './App.css'
 import Main from "./Component/Main";
 import LikeCats from "./Component/LikeCats";
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
 
 
 
